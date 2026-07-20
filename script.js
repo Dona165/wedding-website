@@ -90,6 +90,18 @@ window.addEventListener("load", () => {
     }, 1000); // optional delay before fade
 });
 
+  window.addEventListener("load", function() {
+    const loader = document.getElementById("loader");
+    const mainContent = document.getElementById("main-content");
+
+    // Hide loader after 2 seconds
+    setTimeout(() => {
+      loader.style.display = "none";
+      mainContent.style.display = "block";
+    }, 2000);
+  });
+
+
 
 // ================= SCROLL REVEAL =================
 const reveals = document.querySelectorAll(".reveal");

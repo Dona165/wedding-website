@@ -13,12 +13,16 @@
 
 <body>
   <!-- Loader -->
-  <div id="loader">
-    <div class="loader-content">
-      <h1><img src="images/monogram-date.png" alt="D&J Monogram"></h1>
-      <!--<p>22 August 2026</p> -->
-    </div>
+<div id="loader">
+  <div class="loader-content">
+    <h1><img src="images/monogram-date.png" alt="D&J Monogram"></h1>
   </div>
+</div>
+
+<!-- Main Content -->
+<div id="main-content" style="display:none;">
+  <!-- Your wedding site content here -->
+</div>
 
   <!-- Navigation -->
   <!--<nav>
@@ -67,7 +71,12 @@
   <div class="hero-overlay">
    <!-- <img src="images/monogram-date.png" alt="D&J Monogram" class="hero-monogram">  -->
     <h3>Together with our families</h3>
-    <h1>Dona & Jibin</h1>
+    <h1 class="hero-names">
+    <span class="name-dona">Dona</span>
+    <span class="name-amp">&</span>
+    <span class="name-jibin">Jibin</span>
+    </h1>
+
     <p>Joyfully invite you to celebrate our Holy Matrimony</p>
     <h4>22 August 2026</h4>
     <a href="#story" class="btn">Explore Our Story</a>
@@ -306,6 +315,30 @@
   <!-- Scripts -->
   <script src="script.js"></script>
 <div class="petals"></div>
+<script>
+    // Disable browser scroll restoration
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+
+    window.addEventListener("load", function() {
+      const loader = document.getElementById("loader");
+      const mainContent = document.getElementById("main-content");
+
+      // Always reset scroll immediately
+      window.scrollTo(0, 0);
+
+      // Hide loader after 2 seconds
+      setTimeout(() => {
+        loader.style.display = "none";
+        mainContent.style.display = "block";
+
+        // Force scroll to top again after loader hides
+        window.scrollTo(0, 0);
+      }, 2000);
+    });
+  </script>
+
 
 </body>
 </html>
