@@ -142,7 +142,7 @@ font-size:82px;
 
 .hero-overlay h2{
 
-font-size:48px;
+font-size: 1.8rem;   /* smaller headings on mobile */
 
 margin:10px;
 
@@ -229,7 +229,15 @@ transform:scale(1.08);
 }
 
 @media(max-width:768px){
+  .family-container,
+  .event-container {
+    flex-direction: column;   /* stack cards vertically */
+    align-items: center;
+  }
 
+  .event-card {
+    margin-bottom: 2rem;
+  }
 nav{
 
 padding:20px;
@@ -250,7 +258,7 @@ font-size:50px;
 
 .overlay h2{
 
-font-size:30px;
+font-size: 1.8rem;   /* smaller headings on mobile */
 
 }
 
@@ -323,7 +331,7 @@ text-align:center;
 margin-top: 0rem;   /* reduce top spacing */
 padding-top: 0;       /* remove extra padding if any */
 font-family:'Playfair Display',serif;
-font-size:50px;
+font-size: 1.8rem;   /* smaller headings on mobile */
 color:#222;
 margin-bottom: 10px;
 
@@ -339,9 +347,10 @@ padding: 0 20px;          /* adds breathing space on smaller screens */
   text-align: center;      /* centers the text horizontally */
   margin: 0 auto 40px;     /* adds 40px space below */
   max-width: 600px;        /* keeps it balanced, not too wide */
-  font-size: 18px;
+  font-size: 1rem;
+  line-height: 1.5;
   color: #555;
-  line-height: 1.6;
+ 
 }
 
 .gold-line{
@@ -469,6 +478,9 @@ text-align:center;
 box-shadow:0 20px 45px rgba(0,0,0,.08);
 
 transition:.4s;
+width: 100%;        /* full width on small screens */
+max-width: 400px;   /* limit size on larger screens */
+margin: 1rem auto;  /* center cards */
 
 }
 
@@ -607,9 +619,8 @@ z-index:99999;
 
 #lightbox img{
 
-max-width:90%;
-
-max-height:90%;
+max-width: 100%;
+height: auto;
 
 border-radius:15px;
 
@@ -649,7 +660,7 @@ footer h2{
 
 font-family:'Cormorant Garamond',serif;
 
-font-size:55px;
+font-size: 1.8rem;   /* smaller headings on mobile */
 
 }
 
@@ -1073,3 +1084,4 @@ left:130%;
   color: #d4af37;
   margin-bottom: 0.10rem;
 }
+
