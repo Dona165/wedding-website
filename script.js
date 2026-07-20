@@ -87,7 +87,7 @@ window.addEventListener("load", () => {
     const loader = document.getElementById("loader");
     setTimeout(() => {
         loader.classList.add("loaded"); // triggers CSS fade-out
-    }, 1800); // optional delay before fade
+    }, 1000); // optional delay before fade
 });
 
 
@@ -195,3 +195,12 @@ function createPetal() {
 
 // generate petals continuously
 setInterval(createPetal, 600);
+
+
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+

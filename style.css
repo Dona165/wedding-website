@@ -60,7 +60,7 @@ font-family:'Cormorant Garamond',serif;
 
 font-size:34px;
 
-color:white;
+color:rgb(201, 182, 8);
 
 font-weight:500;
 
@@ -78,7 +78,7 @@ list-style:none;
 
 nav a{
 
-color:white;
+color:rgb(212, 219, 127);
 
 text-decoration:none;
 
@@ -87,6 +87,60 @@ font-size:15px;
 letter-spacing:1px;
 
 }
+
+/* Base navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background:rgba(255,255,255,.15);
+  backdrop-filter:blur(18px);
+  box-shadow:0 8px 30px rgba(139, 136, 136, 0.921);
+  z-index:999;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #bca311;
+  font-weight: 300;
+}
+
+/* Hamburger hidden by default */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* hide links initially */
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    border: 1px solid #d4af37;
+    padding: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex; /* show when toggled */
+  }
+
+  .hamburger {
+    display: block; /* show hamburger on mobile */
+  }
+}
+
 
 .hero{
 
@@ -1008,7 +1062,8 @@ left:130%;
   padding: 1.8rem;
   border-radius: 10px;
   text-align: center;
-  width: 250px;
+  /*width: 250px; */
+  width: dynamic; 
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
@@ -1072,4 +1127,31 @@ left:130%;
   font-family: 'Playfair Display', serif;
   color: #d4af37;
   margin-bottom: 0.10rem;
+}
+
+/* Default size (for laptops/desktops) */
+#loader .loader-content img {
+  width: 250px;   /* adjust as needed */
+  height: auto;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  #loader .loader-content img {
+    width: 200px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 768px) {
+  #loader .loader-content img {
+    width: 150px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+  #loader .loader-content img {
+    width: 120px;
+  }
 }
