@@ -437,12 +437,10 @@ font-size:22px;
 
 /* Countdown */
 
-.countdown{
-
-padding:120px 10%;
-background:white;
-text-align:center;
-
+.countdown {
+  padding: 120px 10%;
+  background: white;
+  text-align: center;
 }
 
 .timer {
@@ -451,52 +449,53 @@ text-align:center;
   gap: 25px;
   flex-wrap: nowrap;   /* keep in one line */
   flex: 0 0 auto;
+  overflow-x: auto;    /* allows scroll if screen is too narrow */
 }
 
 .box {
   background: white;
-  padding: 35px;
-  width: 170px;
+  width: 160px;        /* fixed square size */
+  height: 160px;       /* same as width → square */
   border-radius: 20px;
   box-shadow: 0 20px 40px rgba(0,0,0,.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .box h3 {
-  font-size: 50px;
+  font-size: 4vw;      /* scales with screen width */
   color: #C8A96A;
+  margin: 0;
 }
 
 .box span {
-  font-size: 18px;
+  font-size: 1.5vw;      /* scales with screen width */
 }
 
-/* Tablet screens */
+/* Tablet adjustments */
 @media (max-width: 768px) {
   .box {
     width: 120px;
-    padding: 25px;
-  }
-  .box h3 {
-    font-size: 36px;
-  }
-  .box span {
-    font-size: 14px;
+    height: 120px;
   }
 }
 
-/* Mobile screens */
+/* Mobile adjustments */
 @media (max-width: 480px) {
   .box {
     width: 90px;
-    padding: 20px;
+    height: 90px;
   }
   .box h3 {
-    font-size: 28px;
+    font-size: 6vw;
   }
   .box span {
-    font-size: 12px;
+    font-size: 3.5vw;
   }
 }
+
 
 /*
 .timer{
