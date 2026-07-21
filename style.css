@@ -445,13 +445,67 @@ text-align:center;
 
 }
 
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: nowrap;   /* keep in one line */
+  flex: 0 0 auto;
+}
+
+.box {
+  background: white;
+  padding: 35px;
+  width: 170px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,.08);
+}
+
+.box h3 {
+  font-size: 50px;
+  color: #C8A96A;
+}
+
+.box span {
+  font-size: 18px;
+}
+
+/* Tablet screens */
+@media (max-width: 768px) {
+  .box {
+    width: 120px;
+    padding: 25px;
+  }
+  .box h3 {
+    font-size: 36px;
+  }
+  .box span {
+    font-size: 14px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .box {
+    width: 90px;
+    padding: 20px;
+  }
+  .box h3 {
+    font-size: 28px;
+  }
+  .box span {
+    font-size: 12px;
+  }
+}
+
+/*
 .timer{
 
 display:flex;
 justify-content:center;
 gap:25px;
-flex-wrap:wrap;
-
+flex-wrap:nowrap;
+flex: 0 0 auto;
 }
 
 .box{
@@ -476,6 +530,7 @@ color:#C8A96A;
 font-size:18px;
 
 }
+*/
 
 /* ================= EVENTS ================= */
 
