@@ -315,6 +315,29 @@ font-size:24px;
 }
 
 }
+@media (max-width: 768px) {
+  nav {
+    padding: 10px 20px;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    border: 1px solid #d4af37;
+    padding: 1rem;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
 
 /* Scroll Indicator */
 
@@ -380,7 +403,6 @@ font-family:'Playfair Display',serif;
 font-size:50px;
 color:#222;
 margin-bottom: 10px;
-
 text-align: center;       /* ensures all text is centered */
 max-width: 800px;         /* keeps content aligned and not too wide */
 margin: 0 auto;           /* centers the block itself */
@@ -495,7 +517,6 @@ font-size:22px;
     font-size: 3.5vw;
   }
 }
-
 
 /*
 .timer{
@@ -621,7 +642,18 @@ color:#C8A96A;
 font-size:22px;
 
 }
-
+@media (max-width: 768px) {
+  .event-card h2 { font-size: 36px; }
+  .event-card h3 { font-size: 28px; }
+  .event-card h4 { font-size: 20px; }
+  .event-card p { font-size: 16px; }
+}
+@media (max-width: 480px) {
+  .event-card h2 { font-size: 28px; }
+  .event-card h3 { font-size: 22px; }
+  .event-card h4 { font-size: 18px; }
+  .event-card p { font-size: 14px; }
+}
 .location-btn{
 
 display:inline-block;
@@ -801,6 +833,17 @@ animation:heartbeat 1.5s infinite;
 
 }
 
+@media (max-width: 768px) {
+  footer h2 { font-size: 36px; }
+  footer h3 { font-size: 28px; }
+  footer p { font-size: 16px; }
+}
+@media (max-width: 480px) {
+  footer h2 { font-size: 28px; }
+  footer h3 { font-size: 22px; }
+  footer p { font-size: 14px; }
+}
+
 @keyframes heartbeat{
 
 0%{transform:scale(1);}
@@ -927,6 +970,16 @@ left:130%;
   width: 180px;
   margin-bottom: 20px;
   animation: fadeIn 2s ease forwards;
+}
+@media (max-width: 768px) {
+  .hero-overlay h1 { font-size: 50px; }
+  .hero-overlay h2 { font-size: 30px; }
+  .hero-overlay h4 { font-size: 22px; }
+}
+@media (max-width: 480px) {
+  .hero-overlay h1 { font-size: 36px; }
+  .hero-overlay h2 { font-size: 24px; }
+  .hero-overlay h4 { font-size: 18px; }
 }
 
 @keyframes fadeIn {
@@ -1227,4 +1280,10 @@ left:130%;
     margin: 5px 0;
   }
 }
-
+@media (max-width: 768px) {
+  .section-title h2 { font-size: 36px; }
+}
+@media (max-width: 480px) {
+  .section-title h2 { font-size: 28px; }
+  .section-title p { font-size: 14px; }
+}
