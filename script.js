@@ -1,3 +1,7 @@
+document.body.classList.add("loading");
+document.body.classList.remove("loading");
+
+
 // ================= COUNTDOWN =================
 const wedding = new Date("August 22, 2026 10:30:00").getTime();
 
